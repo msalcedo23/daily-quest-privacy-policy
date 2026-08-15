@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Roast - Privacy Policy</title>
+    <title>Resume Roast - Política de Privacidad / Privacy Policy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -32,6 +32,22 @@
         strong { color: #b8431f; }
         ul { padding-left: 20px; }
         li { margin-bottom: 8px; }
+        .lang-switch {
+            margin-bottom: 24px; padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb; font-size: 15px;
+        }
+        .lang-switch a { color: #e0552b; text-decoration: none; font-weight: 600; }
+        .lang-switch a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td {
+            text-align: left; padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb; vertical-align: top;
+        }
+        th {
+            font-size: 13px; text-transform: uppercase;
+            letter-spacing: .04em; color: #666;
+        }
+        .divider { border: 0; border-top: 3px solid #e0552b; margin: 56px 0 40px; }
         .footer {
             text-align: center; margin-top: 40px; padding-top: 20px;
             border-top: 1px solid #e5e7eb; color: #666;
@@ -40,76 +56,238 @@
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy for Resume Roast</h1>
-        <p class="update-date"><strong>Last updated: June 2026</strong></p>
+
+        <p class="lang-switch"><a href="#es">Español</a> &nbsp;·&nbsp; <a href="#en">English</a></p>
+
+        <!-- ============================ ESPAÑOL ============================ -->
+        <h1 id="es">Política de Privacidad de Resume Roast</h1>
+        <p class="update-date"><strong>Última actualización: 15 de agosto de 2026</strong></p>
+
+        <h2>Introducción</h2>
+        <p>Esta Política de Privacidad explica cómo Resume Roast ("nosotros") trata tu información cuando usas la aplicación móvil Resume Roast (la "App"), que genera con inteligencia artificial un análisis y, si lo pides, una reescritura de tu currículum.</p>
+        <p>Al usar la App aceptas las prácticas descritas en esta política.</p>
+        <ul>
+            <li><strong>No hay cuentas ni registro.</strong> No pedimos correo, contraseña ni inicio de sesión.</li>
+            <li><strong>No mostramos publicidad</strong> ni compartimos datos con anunciantes.</li>
+            <li><strong>No usamos herramientas de analítica de terceros.</strong></li>
+            <li><strong>No vendemos datos personales</strong> a nadie.</li>
+        </ul>
+
+        <h2>Información que tratamos</h2>
+
+        <h3>Contenido de tu currículum</h3>
+        <ul>
+            <li>El texto que pegas, o el que la App extrae <strong>en tu propio dispositivo</strong> a partir de un PDF que eliges, o de una imagen mediante reconocimiento de texto local (OCR).</li>
+            <li>Si además pegas una <strong>oferta de empleo</strong> para adaptar el currículum, ese texto se trata igual.</li>
+            <li>Este contenido puede incluir datos personales que tú decides incluir: <strong>nombre, correo electrónico, teléfono, dirección postal, experiencia laboral, formación e idiomas</strong>. Tú controlas qué envías.</li>
+        </ul>
+
+        <h3>Identificador de dispositivo</h3>
+        <ul>
+            <li>La App genera un identificador del dispositivo (el <strong>ANDROID_ID</strong> de Android o, si no está disponible, un código aleatorio creado la primera vez) y lo envía a nuestro servidor.</li>
+            <li>Es la clave de tu <strong>monedero de créditos</strong>: sin él no podríamos saber cuántos análisis te quedan, acreditar tus compras ni evitar que se reclamen créditos gratuitos de forma repetida.</li>
+            <li>Este identificador <strong>sí se almacena de forma permanente</strong> en nuestro servidor, asociado únicamente a un saldo de créditos. No va unido a tu nombre, a tu correo ni al contenido de tu currículum, y no se comparte con nadie.</li>
+        </ul>
+
+        <h3>Verificación de integridad</h3>
+        <ul>
+            <li>Al crear el monedero por primera vez, la App solicita a Google un testigo de <strong>Play Integrity</strong> y lo envía a nuestro servidor, para comprobar que la App es la copia auténtica instalada desde Google Play e impedir el abuso de los créditos gratuitos. No se almacena.</li>
+        </ul>
+
+        <h3>Compras</h3>
+        <ul>
+            <li>Las compras dentro de la App (paquetes de créditos) las procesa <strong>Google Play Billing</strong>. Recibimos y <strong>almacenamos</strong> el identificador del producto y el testigo de la compra, para acreditar los créditos y evitar que una misma compra se canjee dos veces.</li>
+            <li><strong>No</strong> recibimos ni almacenamos los datos de tu tarjeta ni de tu medio de pago.</li>
+        </ul>
+
+        <h3>Preferencia de idioma</h3>
+        <ul>
+            <li>El idioma en el que quieres el análisis, que puedes elegir manualmente o dejar que se detecte a partir del idioma de tu currículum. Se envía junto con la solicitud y no se almacena.</li>
+        </ul>
+
+        <h2>Cómo se procesa tu currículum</h2>
+        <p>Cuando pides un análisis o una reescritura, el texto viaja por una conexión cifrada (HTTPS) a nuestro servidor (Google Cloud / Firebase Functions), que lo reenvía a nuestro proveedor de IA (<strong>Anthropic</strong>) para generar el resultado que se devuelve a tu dispositivo.</p>
+        <ul>
+            <li><strong>No almacenamos</strong> el texto de tu currículum en nuestros servidores. Se procesa <strong>de forma efímera</strong>: se usa en memoria únicamente para responder a esa solicitud concreta y no se guarda en base de datos ni se registra en nuestros archivos de log.</li>
+            <li>Nuestro proveedor de IA procesa el texto para generar el resultado conforme a los términos de su API. Anthropic no utiliza por defecto los datos enviados a través de su API para entrenar sus modelos.</li>
+        </ul>
+
+        <h2>Lo que nunca sale de tu dispositivo</h2>
+        <ul>
+            <li><strong>La fotografía</strong> que añadas al currículum. El PDF se genera íntegramente en tu teléfono; la imagen nunca se envía a ningún servidor.</li>
+            <li><strong>Los PDF generados</strong>, que se guardan solo donde tú elijas en tu dispositivo.</li>
+            <li><strong>El reconocimiento de texto de imágenes (OCR)</strong>, que se ejecuta localmente.</li>
+            <li><strong>Tu historial de análisis</strong> (puntuación, veredicto y desglose) y tus preferencias, que se guardan solo en el almacenamiento interno de la App.</li>
+        </ul>
+        <p>Desinstalar la App o borrar sus datos elimina toda esta información local. Ten en cuenta que <strong>el saldo de créditos no es local</strong>: vive en nuestro servidor asociado al identificador de tu dispositivo, precisamente para que no se pierda al reinstalar.</p>
+
+        <h2>Para qué usamos la información</h2>
+        <ul>
+            <li>Generar el análisis y la reescritura de tu currículum con IA.</li>
+            <li>Mostrar y guardar tus resultados localmente para que puedas volver a consultarlos.</li>
+            <li>Gestionar tu saldo de créditos y procesar tus compras.</li>
+            <li>Prevenir el abuso de los créditos gratuitos.</li>
+        </ul>
+
+        <h2>Servicios de terceros</h2>
+        <ul>
+            <li><strong>Google Cloud / Firebase</strong> — aloja nuestro servidor (región us-central1) y la base de datos del monedero de créditos.</li>
+            <li><strong>Anthropic</strong> — provee el modelo de IA que genera el análisis y la reescritura. Es el único tercero que recibe el contenido de tu currículum.</li>
+            <li><strong>Google Play Billing</strong> — procesa las compras dentro de la App.</li>
+            <li><strong>Google Play Integrity</strong> — verifica que la App es auténtica.</li>
+        </ul>
+
+        <h2>Conservación de los datos</h2>
+        <table>
+            <thead><tr><th>Dato</th><th>Conservación</th></tr></thead>
+            <tbody>
+                <tr><td>Contenido del currículum y ofertas de empleo</td><td>No se conserva; solo durante la solicitud</td></tr>
+                <tr><td>Identificador de dispositivo y saldo de créditos</td><td>Hasta que solicites su eliminación</td></tr>
+                <tr><td>Registro de compras</td><td>Hasta que solicites su eliminación</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Seguridad</h2>
+        <ul>
+            <li>Toda la comunicación entre la App, nuestro servidor y el proveedor de IA viaja cifrada mediante <strong>HTTPS/TLS</strong>.</li>
+            <li>No conservamos el texto del currículum después de generar el resultado.</li>
+            <li>La clave del proveedor de IA y el procesamiento están en el servidor; la App nunca contacta directamente al proveedor de IA.</li>
+        </ul>
+
+        <h2>Tus derechos</h2>
+        <ul>
+            <li><strong>Acceso</strong>: tus resultados y tu saldo son visibles dentro de la App.</li>
+            <li><strong>Eliminación local</strong>: usa "Borrar historial" en la App, o borra los datos de la App / desinstálala.</li>
+            <li><strong>Eliminación en el servidor</strong>: puedes pedir que borremos el identificador de tu dispositivo, tu saldo de créditos y tu registro de compras escribiendo al correo de abajo. Atenderemos la solicitud en un plazo máximo de 30 días. Al eliminar el monedero también se elimina el saldo de créditos que tuvieras.</li>
+            <li>Como no conservamos el texto de tu currículum, no existe copia en el servidor que borrar.</li>
+        </ul>
+
+        <h2>Menores de edad</h2>
+        <p>La App está dirigida a personas que buscan empleo y no está destinada a menores de 13 años. No recopilamos de forma consciente datos personales de menores de esa edad.</p>
+
+        <h2>Cambios en esta Política de Privacidad</h2>
+        <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Los cambios se reflejarán actualizando la fecha de "última actualización" que aparece arriba.</p>
+
+        <div class="contact">
+            <h2>Contacto</h2>
+            <p>Si tienes cualquier duda sobre esta Política de Privacidad, escríbenos a:</p>
+            <p><strong>Correo</strong>: mariangela.salcedo.rojas@gmail.com</p>
+        </div>
+
+        <h2>Cumplimiento</h2>
+        <ul>
+            <li>Requisitos de Google Play Store</li>
+            <li>Principios del Reglamento General de Protección de Datos (RGPD)</li>
+            <li>Ley de Privacidad del Consumidor de California (CCPA), cuando corresponda</li>
+        </ul>
+
+        <hr class="divider">
+
+        <!-- ============================ ENGLISH ============================ -->
+        <h1 id="en">Privacy Policy for Resume Roast</h1>
+        <p class="update-date"><strong>Last updated: 15 August 2026</strong></p>
 
         <h2>Introduction</h2>
         <p>This Privacy Policy explains how Resume Roast ("we", "our", or "us") handles your information when you use the Resume Roast mobile application (the "App"), which provides an AI-generated review and optional rewrite of a resume/CV you submit.</p>
         <p>By using the App, you agree to the practices described in this policy.</p>
-
-        <h2>Information We Collect</h2>
-
-        <h3>Information You Provide</h3>
         <ul>
-            <li><strong>Resume content</strong>: the text you paste, or the text extracted on your device from a PDF you choose to upload. This content may include personal information you decide to include (such as your name, contact details, and work history). You control what you submit.</li>
+            <li><strong>No accounts, no sign-up.</strong> We never ask for an email, a password or a login.</li>
+            <li><strong>No advertising</strong> and no sharing of data with advertisers.</li>
+            <li><strong>No third-party analytics.</strong></li>
+            <li><strong>We never sell personal data.</strong></li>
         </ul>
 
-        <h3>Information Collected Automatically</h3>
+        <h2>Information We Handle</h2>
+
+        <h3>Your Resume Content</h3>
         <ul>
-            <li><strong>Language preference</strong>: your device language, used to choose the language of the review.</li>
-            <li><strong>Technical data</strong>: standard information needed to deliver a network request (such as a temporary IP address handled by our hosting provider). We do not use third-party analytics or advertising SDKs.</li>
+            <li>The text you paste, or the text the App extracts <strong>on your own device</strong> from a PDF you choose, or from an image using on-device text recognition (OCR).</li>
+            <li>If you also paste a <strong>job posting</strong> to tailor the resume, that text is handled the same way.</li>
+            <li>This content may include personal information you decide to include: <strong>name, email address, phone number, postal address, work history, education and languages</strong>. You control what you submit.</li>
+        </ul>
+
+        <h3>Device Identifier</h3>
+        <ul>
+            <li>The App derives a device identifier (Android's <strong>ANDROID_ID</strong>, or a random code created on first launch when that is unavailable) and sends it to our server.</li>
+            <li>It is the key to your <strong>credit wallet</strong>: without it we could not tell how many analyses you have left, credit your purchases, or prevent free credits from being claimed repeatedly.</li>
+            <li>This identifier <strong>is stored permanently</strong> on our server, associated only with a credit balance. It is not linked to your name, your email or your resume content, and it is not shared with anyone.</li>
+        </ul>
+
+        <h3>Integrity Check</h3>
+        <ul>
+            <li>When the wallet is first created, the App requests a <strong>Play Integrity</strong> token from Google and sends it to our server, to confirm the App is the genuine copy installed from Google Play and prevent abuse of the free credits. It is not stored.</li>
         </ul>
 
         <h3>Purchases</h3>
         <ul>
-            <li>In-app purchases (credit packs) are processed by <strong>Google Play Billing</strong>. We receive a confirmation that a purchase occurred; we do <strong>not</strong> receive or store your payment card details.</li>
+            <li>In-app purchases (credit packs) are processed by <strong>Google Play Billing</strong>. We receive and <strong>store</strong> the product identifier and the purchase token, in order to grant the credits and make sure a single purchase cannot be redeemed twice.</li>
+            <li>We do <strong>not</strong> receive or store your payment card details.</li>
+        </ul>
+
+        <h3>Language Preference</h3>
+        <ul>
+            <li>The language you want the review in, which you can pick manually or let the App detect from your resume's own language. It is sent with the request and is not stored.</li>
         </ul>
 
         <h2>How Your Resume Is Processed</h2>
         <p>When you request a review or a rewrite, the resume text is sent over an encrypted connection (HTTPS) to our backend (Google Cloud / Firebase Functions), which forwards it to our AI provider (<strong>Anthropic</strong>) to generate the result that is returned to your device.</p>
         <ul>
-            <li>We do <strong>not</strong> store your resume text on our servers. It is processed transiently to produce the result and is not retained by us afterwards.</li>
+            <li>We do <strong>not</strong> store your resume text on our servers. It is processed <strong>ephemerally</strong>: used in memory solely to answer that specific request, and never written to a database or to our server logs.</li>
             <li>Our AI provider processes the text to generate the output under its API terms. Anthropic does not use data submitted through its API to train its models by default.</li>
         </ul>
 
-        <h2>Data Stored On Your Device</h2>
-        <p>The following are stored <strong>locally on your device only</strong>, never on our servers:</p>
+        <h2>What Never Leaves Your Device</h2>
         <ul>
-            <li>Your history of past results (score, verdict, and breakdown).</li>
-            <li>Your remaining credits and app preferences.</li>
+            <li><strong>The photo</strong> you add to your resume. The PDF is generated entirely on your phone; the image is never uploaded anywhere.</li>
+            <li><strong>The generated PDFs</strong>, saved only where you choose on your device.</li>
+            <li><strong>On-device text recognition (OCR)</strong>, which runs locally.</li>
+            <li><strong>Your analysis history</strong> (score, verdict and breakdown) and your preferences, stored only in the App's internal storage.</li>
         </ul>
-        <p>Uninstalling the App or clearing its data removes all of this local information.</p>
+        <p>Uninstalling the App or clearing its data removes all of this local information. Note that <strong>your credit balance is not local</strong>: it lives on our server, tied to your device identifier, precisely so it is not lost on reinstall.</p>
 
         <h2>How We Use Your Information</h2>
         <ul>
             <li>To generate the AI review and optional rewrite of your resume.</li>
             <li>To display and store your results locally so you can revisit them.</li>
             <li>To manage your credit balance and process purchases.</li>
+            <li>To prevent abuse of the free credits.</li>
         </ul>
 
         <h2>Third-Party Services</h2>
         <ul>
-            <li><strong>Google Cloud / Firebase Functions</strong> — hosts our backend that processes requests.</li>
-            <li><strong>Anthropic</strong> — provides the AI model that generates the review/rewrite from the submitted text.</li>
+            <li><strong>Google Cloud / Firebase</strong> — hosts our backend (us-central1 region) and the credit wallet database.</li>
+            <li><strong>Anthropic</strong> — provides the AI model that generates the review/rewrite. It is the only third party that receives your resume content.</li>
             <li><strong>Google Play Billing</strong> — processes in-app purchases.</li>
+            <li><strong>Google Play Integrity</strong> — verifies that the App is genuine.</li>
         </ul>
+
+        <h2>Data Retention</h2>
+        <table>
+            <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+            <tbody>
+                <tr><td>Resume content and job postings</td><td>Not retained; only for the duration of the request</td></tr>
+                <tr><td>Device identifier and credit balance</td><td>Until you request deletion</td></tr>
+                <tr><td>Purchase records</td><td>Until you request deletion</td></tr>
+            </tbody>
+        </table>
 
         <h2>Data Security</h2>
         <ul>
-            <li>Resume text is transmitted over encrypted HTTPS connections.</li>
+            <li>All communication between the App, our server and the AI provider is encrypted using <strong>HTTPS/TLS</strong>.</li>
             <li>We do not retain resume text on our servers after generating a result.</li>
             <li>The AI provider key and processing happen server-side; the App never contacts the AI vendor directly.</li>
         </ul>
 
-        <h2>Children's Privacy</h2>
-        <p>The App is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
-
         <h2>Your Rights</h2>
         <ul>
             <li><strong>Access</strong>: your results and credits are visible within the App.</li>
-            <li><strong>Deletion</strong>: clear local data by using "Clear history" in the App, or by clearing the App's data / uninstalling it. Because we do not retain your resume text, there is no server-side copy to delete.</li>
-            <li><strong>Questions</strong>: contact us using the details below.</li>
+            <li><strong>Local deletion</strong>: use "Clear history" in the App, or clear the App's data / uninstall it.</li>
+            <li><strong>Server-side deletion</strong>: you can ask us to delete your device identifier, your credit balance and your purchase records by writing to the email below. We will respond within 30 days at the latest. Deleting the wallet also deletes any credit balance you hold.</li>
+            <li>Because we do not retain your resume text, there is no server-side copy of it to delete.</li>
         </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>The App is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
 
         <h2>Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last updated" date above.</p>
